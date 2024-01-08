@@ -6,7 +6,7 @@ with [DaisyUI](https://daisyui.com). All content is fetched from a self-hosted i
 
 ## Developing
 
-Once you've created a project and installed dependencies with `pnpm install` (or `pnpm install` or `yarn`), start a
+Once you've created a project and installed dependencies with `pnpm install` (as the CI/CD is using `pnpm` as well), start a
 development server:
 
 ```bash
