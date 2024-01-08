@@ -12,8 +12,9 @@
 	<div class="hero-overlay bg-opacity-20"></div>
 	<div class="hero-content text-center text-neutral-content">
 		<div class="max-w-md">
-			<h1><img class="mb-5 mt-15" src="img/hero-logo.png" alt="Opus Irae" /></h1>
-			<p class="mb-20 text-2xl tracking-widest uppercase font-thin">Symphonic Black Metal</p>
+			<h1><img class="mb-5 mt-15" src="{getImageUrl(data.aggregator.logo_image.id)}" alt="{data.aggregator.title}" />
+			</h1>
+			<p class="mb-20 text-2xl tracking-widest uppercase font-thin">{data.aggregator.tagline}</p>
 			{#each data.aggregator.links as link}
 				<a class="btn btn-block mb-5 opacity-75 shadow-2xl shadow-inner" href="{link.url}">
 					<i class="fa-brands fa-instagram mr-4 text-2xl"></i>
@@ -29,7 +30,7 @@
 	</div>
 	<div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
 		Jurisdiction: Germany
-		<a href="http://opus-irae.com/impressum/">
+		<a href="{data.aggregator.impress_url}">
 			<span>Impressum & Datenschutzerklärung</span>
 		</a>
 	</div>
