@@ -1,28 +1,16 @@
-# create-svelte
+# bandlinks
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+This is a [Linktree](https://linktr.ee) like link aggregator for my band's websites, aka "link in bio". It is written
+in [Svelte](https://svelte.dev/) with [SvelteKit](https://kit.svelte.dev/) and uses [Tailwind](https://tailwindcss.com/)
+with [DaisyUI](https://daisyui.com). All content is fetched from a self-hosted instance of [Directus](https://directus.io/).
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Once you've created a project and installed dependencies with `pnpm install` (or `pnpm install` or `yarn`), start a
+development server:
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+pnpm run dev
 ```
 
 ## Building
@@ -30,9 +18,12 @@ npm run dev -- --open
 To create a production version of your app:
 
 ```bash
-npm run build
+pnpm run build
 ```
 
-You can preview the production build with `npm run preview`.
+You can preview the production build with `pnpm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Deployment
+
+There is a GitHub action triggered after every commit on `main` which will build a Docker container, push it to GitHub
+Container Registry and trigger a re-deployment via a webhook. The project uses SvelteKit's `node-adaptor` to enable SSR. 
