@@ -35,6 +35,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "ml.llm.AIAssistantPromptsLibrary",
     "ts.external.directory.path": "/Users/markus/git/bandlinks/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -47,11 +48,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1704628062124</updated>
-      <workItem from="1704628063399" duration="1420000" />
+      <workItem from="1704628063399" duration="5073000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
