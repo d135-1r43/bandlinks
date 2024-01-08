@@ -3,6 +3,8 @@
 
 	export let data: PageData;
 
+	const currentYear = new Date().getFullYear();
+
 	function getImageUrl(uuid: string): string {
 		return 'https://directus.herhoffer.net/assets/' + uuid;
 	}
@@ -17,7 +19,7 @@
 			<p class="mb-20 text-2xl tracking-widest uppercase font-thin">{data.aggregator.tagline}</p>
 			{#each data.aggregator.links as link}
 				<a class="btn btn-block mb-5 opacity-75 shadow-2xl shadow-inner" href="{link.url}">
-					<i class="fa-brands fa-instagram mr-4 text-2xl"></i>
+					<i class="{link.font_awesome_font} {link.font_awesome_icon_name} text-2xl"></i>
 					<span class="tracking-widest">{link.caption}</span>
 				</a>
 			{/each}
@@ -26,7 +28,7 @@
 </div>
 <footer class="footer items-center p-4 bg-neutral text-neutral-content">
 	<div class="items-center grid-flow-col">
-		<p>© 2022</p>
+		<p>© {currentYear}</p>
 	</div>
 	<div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
 		Jurisdiction: Germany
