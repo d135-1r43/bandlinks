@@ -14,7 +14,8 @@
 	<div class="hero-overlay bg-opacity-20"></div>
 	<div class="hero-content text-center text-neutral-content">
 		<div class="max-w-md">
-			<h1><img class="mb-5 mt-15" src="{getImageUrl(data.aggregator.logo_image.id)}" alt="{data.aggregator.title}" />
+			<h1>
+				<img class="mb-5 mt-15" src="{getImageUrl(data.aggregator.logo_image.id)}" alt="{data.aggregator.title}" />
 			</h1>
 			<p class="mb-20 text-2xl tracking-widest uppercase font-thin">{data.aggregator.tagline}</p>
 			{#each data.aggregator.links as link}
@@ -28,7 +29,7 @@
 </div>
 <footer class="footer items-center p-4 bg-neutral text-neutral-content">
 	<div class="items-center grid-flow-col">
-		<p>© {currentYear}</p>
+		<p>©&nbsp;{currentYear}</p>
 	</div>
 	<div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
 		Jurisdiction: Germany
