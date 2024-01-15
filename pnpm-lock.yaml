@@ -12,10 +12,10 @@ dependencies:
 devDependencies:
   '@sveltejs/adapter-node':
     specifier: ^2.0.2
-    version: 2.0.2(@sveltejs/kit@2.0.7)
+    version: 2.0.2(@sveltejs/kit@2.3.2)
   '@sveltejs/kit':
-    specifier: ^2.0.7
-    version: 2.0.7(@sveltejs/vite-plugin-svelte@3.0.1)(svelte@4.2.8)(vite@5.0.11)
+    specifier: ^2.3.2
+    version: 2.3.2(@sveltejs/vite-plugin-svelte@3.0.1)(svelte@4.2.8)(vite@5.0.11)
   '@sveltejs/vite-plugin-svelte':
     specifier: ^3.0.0
     version: 3.0.1(svelte@4.2.8)(vite@5.0.11)
@@ -594,7 +594,7 @@ packages:
     dev: true
     optional: true
 
-  /@sveltejs/adapter-node@2.0.2(@sveltejs/kit@2.0.7):
+  /@sveltejs/adapter-node@2.0.2(@sveltejs/kit@2.3.2):
     resolution: {integrity: sha512-iboANjLIB7Af74+og5IEQVSPsIfaO+o9zldU/7ljCGCrBj0t2gQlINtuwUhjvwhLgw9vHgICYWWZFxLM2C0zrg==}
     peerDependencies:
       '@sveltejs/kit': ^2.0.0
@@ -602,12 +602,12 @@ packages:
       '@rollup/plugin-commonjs': 25.0.7(rollup@4.9.4)
       '@rollup/plugin-json': 6.1.0(rollup@4.9.4)
       '@rollup/plugin-node-resolve': 15.2.3(rollup@4.9.4)
-      '@sveltejs/kit': 2.0.7(@sveltejs/vite-plugin-svelte@3.0.1)(svelte@4.2.8)(vite@5.0.11)
+      '@sveltejs/kit': 2.3.2(@sveltejs/vite-plugin-svelte@3.0.1)(svelte@4.2.8)(vite@5.0.11)
       rollup: 4.9.4
     dev: true
 
-  /@sveltejs/kit@2.0.7(@sveltejs/vite-plugin-svelte@3.0.1)(svelte@4.2.8)(vite@5.0.11):
-    resolution: {integrity: sha512-qLoPLqdyMKASxAMFuMrv86l81YKhdioXLsa87+QFv2Rmh0GroFXfSIJMpxI4bHfVt8oXRa71G0/lXhJ/2wTPxQ==}
+  /@sveltejs/kit@2.3.2(@sveltejs/vite-plugin-svelte@3.0.1)(svelte@4.2.8)(vite@5.0.11):
+    resolution: {integrity: sha512-AzGWV1TyUSkBuciy06E5NegXndIEgTthDtllv80qynEJFh8bZD62ZxLajiQLOsKGqRDilEQyshDARQxjIqiaqg==}
     engines: {node: '>=18.13'}
     hasBin: true
     requiresBuild: true
@@ -621,6 +621,7 @@ packages:
       cookie: 0.6.0
       devalue: 4.3.2
       esm-env: 1.0.0
+      import-meta-resolve: 4.0.0
       kleur: 4.1.5
       magic-string: 0.30.5
       mrmime: 2.0.0
@@ -1577,6 +1578,10 @@ packages:
     dependencies:
       parent-module: 1.0.1
       resolve-from: 4.0.0
+    dev: true
+
+  /import-meta-resolve@4.0.0:
+    resolution: {integrity: sha512-okYUR7ZQPH+efeuMJGlq4f8ubUgO50kByRPyt/Cy1Io4PSRsPjxME+YlVaCOx+NIToW7hCsZNFJyTPFFKepRSA==}
     dev: true
 
   /imurmurhash@0.1.4:
