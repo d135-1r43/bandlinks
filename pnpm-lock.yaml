@@ -7,15 +7,15 @@ settings:
 dependencies:
   daisyui:
     specifier: ^4.7.2
-    version: 4.7.2(postcss@8.4.38)
+    version: 4.9.0(postcss@8.4.38)
 
 devDependencies:
   '@sveltejs/adapter-node':
     specifier: ^2.0.2
-    version: 2.0.2(@sveltejs/kit@2.5.1)
+    version: 2.0.2(@sveltejs/kit@2.5.5)
   '@sveltejs/kit':
     specifier: ^2.5.1
-    version: 2.5.1(@sveltejs/vite-plugin-svelte@3.0.1)(svelte@4.2.12)(vite@5.0.11)
+    version: 2.5.5(@sveltejs/vite-plugin-svelte@3.0.1)(svelte@4.2.12)(vite@5.0.11)
   '@sveltejs/vite-plugin-svelte':
     specifier: ^3.0.0
     version: 3.0.1(svelte@4.2.12)(vite@5.0.11)
@@ -594,7 +594,7 @@ packages:
     dev: true
     optional: true
 
-  /@sveltejs/adapter-node@2.0.2(@sveltejs/kit@2.5.1):
+  /@sveltejs/adapter-node@2.0.2(@sveltejs/kit@2.5.5):
     resolution: {integrity: sha512-iboANjLIB7Af74+og5IEQVSPsIfaO+o9zldU/7ljCGCrBj0t2gQlINtuwUhjvwhLgw9vHgICYWWZFxLM2C0zrg==}
     peerDependencies:
       '@sveltejs/kit': ^2.0.0
@@ -602,12 +602,12 @@ packages:
       '@rollup/plugin-commonjs': 25.0.7(rollup@4.9.4)
       '@rollup/plugin-json': 6.1.0(rollup@4.9.4)
       '@rollup/plugin-node-resolve': 15.2.3(rollup@4.9.4)
-      '@sveltejs/kit': 2.5.1(@sveltejs/vite-plugin-svelte@3.0.1)(svelte@4.2.12)(vite@5.0.11)
+      '@sveltejs/kit': 2.5.5(@sveltejs/vite-plugin-svelte@3.0.1)(svelte@4.2.12)(vite@5.0.11)
       rollup: 4.9.4
     dev: true
 
-  /@sveltejs/kit@2.5.1(@sveltejs/vite-plugin-svelte@3.0.1)(svelte@4.2.12)(vite@5.0.11):
-    resolution: {integrity: sha512-TKj08o3mJCoQNLTdRdGkHPePTCPUGTgkew65RDqjVU3MtPVxljsofXQYfXndHfq0P7KoPRO/0/reF6HesU0Djw==}
+  /@sveltejs/kit@2.5.5(@sveltejs/vite-plugin-svelte@3.0.1)(svelte@4.2.12)(vite@5.0.11):
+    resolution: {integrity: sha512-ULe3PB00q4+wYRL+IS5FDPsCEVnhEITofm7b9Yz8malcH3r1SAnW/JJ6T13hIMeu8QNRIuVQWo+P4+2VklbnLQ==}
     engines: {node: '>=18.13'}
     hasBin: true
     requiresBuild: true
@@ -1079,7 +1079,7 @@ packages:
     engines: {node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0}
     dependencies:
       mdn-data: 2.0.30
-      source-map-js: 1.2.0
+      source-map-js: 1.0.2
     dev: true
 
   /cssesc@3.0.0:
@@ -1092,8 +1092,8 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dev: false
 
-  /daisyui@4.7.2(postcss@8.4.38):
-    resolution: {integrity: sha512-9UCss12Zmyk/22u+JbkVrHHxOzFOyY17HuqP5LeswI4hclbj6qbjJTovdj2zRy8cCH6/n6Wh0lTLjriGnyGh0g==}
+  /daisyui@4.9.0(postcss@8.4.38):
+    resolution: {integrity: sha512-9JsDx4E+30kPxThE+6yEwQokqg1957uwTx/skP2RE98fG6Ten6U+S9YXeQg1a3CI958aF5aOb0oEA+KZFfrZUA==}
     engines: {node: '>=16.9.0'}
     dependencies:
       css-selector-tokenizer: 0.8.0
@@ -2256,6 +2256,11 @@ packages:
       buffer-crc32: 0.2.13
       minimist: 1.2.8
       sander: 0.5.1
+    dev: true
+
+  /source-map-js@1.0.2:
+    resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
+    engines: {node: '>=0.10.0'}
     dev: true
 
   /source-map-js@1.2.0:
