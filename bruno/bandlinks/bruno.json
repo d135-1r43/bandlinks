@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "bandlinks",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

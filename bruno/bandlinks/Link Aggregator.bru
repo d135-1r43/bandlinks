@@ -1,0 +1,16 @@
+meta {
+  name: Link Aggregator
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://directus.herhoffer.net/items/link_aggregator/2?fields=*.*&sort=links.sort
+  body: none
+  auth: none
+}
+
+query {
+  fields: *.*
+  sort: links.sort
+}
