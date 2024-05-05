@@ -13,7 +13,7 @@
 	<link rel="icon" href="{getAssetUrl(data.aggregator.favicon)}" />
 	<title>{data.aggregator.title}</title>
 	<meta name="theme-color" content="{data.aggregator.theme_color}" />
-	<script defer data-domain="{data.host}" src="https://plausible.herhoffer.net/js/script.js"></script>
+	<script defer data-domain="{data.host}" src="https://plausible.herhoffer.net/js/script.outbound-links.js"></script>
 </svelte:head>
 
 <slot />
