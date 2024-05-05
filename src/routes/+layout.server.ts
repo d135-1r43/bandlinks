@@ -2,7 +2,7 @@
 import type { PageLoad } from './$types';
 import { env } from '$env/dynamic/private';
 
-export const load: PageLoad = async ({ fetch: fetch }) => {
+export const load: PageLoad = async ({ fetch: fetch, url: url }) => {
 
 	const bandId: string = env.BAND_ID;
 
@@ -13,5 +13,5 @@ export const load: PageLoad = async ({ fetch: fetch }) => {
 	const json: unknown = await jsonResponse.json();
 
 	// @ts-expect-error Provided by Svelte
-	return { aggregator: json.data };
+	return { aggregator: json.data, host: url.host };
 };
