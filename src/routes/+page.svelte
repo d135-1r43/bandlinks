@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import { MetaTags } from 'svelte-meta-tags';
 
 	export let data: PageData;
 
@@ -9,6 +10,24 @@
 		return 'https://directus.herhoffer.net/assets/' + uuid;
 	}
 </script>
+
+<MetaTags
+	title="{data.aggregator.title}"
+	description="{data.aggregator.tag_line}"
+	openGraph={{
+    title: data.aggregator.title,
+    description: data.aggregator.tag_line,
+    images: [
+      {
+        url: getImageUrl(data.aggregator.background_image.id),
+        width: data.hero.width,
+        height: data.hero.height,
+        alt: data.hero.description
+      }
+    ],
+    siteName: data.aggregator.title
+  }}
+/>
 
 <div class="hero min-h-screen" style="background-image: url({getImageUrl(data.aggregator.background_image.id)})">
 	<div class="hero-overlay bg-opacity-20"></div>
@@ -28,7 +47,7 @@
 	</div>
 </div>
 
-<footer class="footer items-center p-4 bg-[{data.aggregator.theme_color}] text-neutral-content">
+<footer class="footer items-center p-4 bg-black text-neutral-content">
 	<div class="items-center grid-flow-col">
 		<p>©&nbsp;{currentYear}</p>
 	</div>
