@@ -58,8 +58,8 @@ importers:
         specifier: ^3.7.0
         version: 3.7.1(postcss-load-config@4.0.2(postcss@8.4.44))(postcss@8.4.44)(svelte@4.2.19)
       svelte-meta-tags:
-        specifier: ^3.1.0
-        version: 3.1.2(svelte@4.2.19)(typescript@5.4.5)
+        specifier: ^3.1.4
+        version: 3.1.4(svelte@4.2.19)(typescript@5.4.5)
       tailwindcss:
         specifier: ^3.4.1
         version: 3.4.1
@@ -1467,8 +1467,8 @@ packages:
     peerDependencies:
       svelte: ^3.19.0 || ^4.0.0
 
-  svelte-meta-tags@3.1.2:
-    resolution: {integrity: sha512-zw8xSA10ce7atFO1o0N1x41+qU+HBnpGx8KcVRAWPy5iiRdO6fvUFMg6VwJVgMhLSBEUTZXKAvMALLUssbCoCw==}
+  svelte-meta-tags@3.1.4:
+    resolution: {integrity: sha512-TUIfhut0iVeTm7f5v/ZuU/tZ9XsNig9bNN8yK0t2x2WL9qw6AxAVRe9i5XddYJE0SuVwkoDCzjoSg5hXv7oWbQ==}
     peerDependencies:
       svelte: ^3.55.0 || ^4.0.0
 
@@ -2990,7 +2990,7 @@ snapshots:
     dependencies:
       svelte: 4.2.19
 
-  svelte-meta-tags@3.1.2(svelte@4.2.19)(typescript@5.4.5):
+  svelte-meta-tags@3.1.4(svelte@4.2.19)(typescript@5.4.5):
     dependencies:
       schema-dts: 1.1.2(typescript@5.4.5)
       svelte: 4.2.19
