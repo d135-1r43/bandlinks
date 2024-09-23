@@ -61,8 +61,8 @@ importers:
         specifier: ^3.1.4
         version: 3.1.4(svelte@4.2.19)(typescript@5.6.2)
       tailwindcss:
-        specifier: ^3.4.10
-        version: 3.4.10
+        specifier: ^3.4.12
+        version: 3.4.12
       tslib:
         specifier: ^2.7.0
         version: 2.7.0
@@ -1200,10 +1200,6 @@ packages:
     peerDependencies:
       postcss: ^8.4.29
 
-  postcss-selector-parser@6.0.15:
-    resolution: {integrity: sha512-rEYkQOMUCEMhsKbK66tbEU9QVIxbhN18YiniAwA7XQYTVBqrBy+P2p5JcdqsHgKM2zWylp8d7J6eszocfds5Sw==}
-    engines: {node: '>=4'}
-
   postcss-selector-parser@6.1.2:
     resolution: {integrity: sha512-Q8qQfPiZ+THO/3ZrOrO0cJJKfpYCagtMUkXbnEfmgUjwXg6z/WBeOyS9APBBPCTSiDV+s4SwQGu8yFsiMRIudg==}
     engines: {node: '>=4'}
@@ -1371,8 +1367,8 @@ packages:
     resolution: {integrity: sha512-IY1rnGr6izd10B0A8LqsBfmlT5OILVuZ7XsI0vdGPEvuonFV7NYEUK4dAkm9Zg2q0Um92kYjTpS1CAP3Nh/KWw==}
     engines: {node: '>=16'}
 
-  tailwindcss@3.4.10:
-    resolution: {integrity: sha512-KWZkVPm7yJRhdu4SRSl9d4AK2wM3a50UsvgHZO7xY77NQr2V+fIrEuoDGQcbvswWvFGbS2f6e+jC/6WJm1Dl0w==}
+  tailwindcss@3.4.12:
+    resolution: {integrity: sha512-Htf/gHj2+soPb9UayUNci/Ja3d8pTmu9ONTfh4QY8r3MATTZOzmv6UYWF7ZwikEIC8okpfqmGqrmDehua8mF8w==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -1626,7 +1622,7 @@ snapshots:
     dependencies:
       '@jridgewell/set-array': 1.1.2
       '@jridgewell/sourcemap-codec': 1.4.15
-      '@jridgewell/trace-mapping': 0.3.20
+      '@jridgewell/trace-mapping': 0.3.25
 
   '@jridgewell/resolve-uri@3.1.1': {}
 
@@ -2540,7 +2536,7 @@ snapshots:
   postcss-nested@6.0.1(postcss@8.4.45):
     dependencies:
       postcss: 8.4.45
-      postcss-selector-parser: 6.0.15
+      postcss-selector-parser: 6.1.2
 
   postcss-safe-parser@6.0.0(postcss@8.4.45):
     dependencies:
@@ -2549,11 +2545,6 @@ snapshots:
   postcss-scss@4.0.9(postcss@8.4.45):
     dependencies:
       postcss: 8.4.45
-
-  postcss-selector-parser@6.0.15:
-    dependencies:
-      cssesc: 3.0.0
-      util-deprecate: 1.0.2
 
   postcss-selector-parser@6.1.2:
     dependencies:
@@ -2745,7 +2736,7 @@ snapshots:
       magic-string: 0.30.10
       periscopic: 3.1.0
 
-  tailwindcss@3.4.10:
+  tailwindcss@3.4.12:
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
@@ -2766,7 +2757,7 @@ snapshots:
       postcss-js: 4.0.1(postcss@8.4.45)
       postcss-load-config: 4.0.2(postcss@8.4.45)
       postcss-nested: 6.0.1(postcss@8.4.45)
-      postcss-selector-parser: 6.0.15
+      postcss-selector-parser: 6.1.2
       resolve: 1.22.8
       sucrase: 3.35.0
     transitivePeerDependencies:
