@@ -13,8 +13,8 @@ importers:
         version: 4.12.10(postcss@8.4.45)
     devDependencies:
       '@sveltejs/adapter-node':
-        specifier: ^5.2.0
-        version: 5.2.2(@sveltejs/kit@2.5.28(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.2.11))(svelte@4.2.19)(vite@5.2.11))
+        specifier: ^5.2.4
+        version: 5.2.4(@sveltejs/kit@2.5.28(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.2.11))(svelte@4.2.19)(vite@5.2.11))
       '@sveltejs/kit':
         specifier: ^2.5.28
         version: 2.5.28(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.2.11))(svelte@4.2.19)(vite@5.2.11)
@@ -423,8 +423,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@sveltejs/adapter-node@5.2.2':
-    resolution: {integrity: sha512-BCX4zP0cf86TXpmvLQTnnT/tp7P12UMezf+5LwljP1MJC1fFzn9XOXpAHQCyP+pyHGy2K7p5gY0LyLcZFAL02w==}
+  '@sveltejs/adapter-node@5.2.4':
+    resolution: {integrity: sha512-L9Kngx1ce2SMCbyGBbRaJovl5lzdwH650SzOa50txAAssMfWLj2f8yPsA2eCX8EhT6AxD4RHLNrVa5W8VUYz8w==}
     peerDependencies:
       '@sveltejs/kit': ^2.4.0
 
@@ -1753,7 +1753,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.17.2':
     optional: true
 
-  '@sveltejs/adapter-node@5.2.2(@sveltejs/kit@2.5.28(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.2.11))(svelte@4.2.19)(vite@5.2.11))':
+  '@sveltejs/adapter-node@5.2.4(@sveltejs/kit@2.5.28(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.2.11))(svelte@4.2.19)(vite@5.2.11))':
     dependencies:
       '@rollup/plugin-commonjs': 26.0.1(rollup@4.17.2)
       '@rollup/plugin-json': 6.1.0(rollup@4.17.2)
