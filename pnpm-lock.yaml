@@ -13,8 +13,8 @@ importers:
         version: 4.12.12(postcss@8.4.45)
     devDependencies:
       '@sveltejs/adapter-node':
-        specifier: ^5.2.6
-        version: 5.2.6(@sveltejs/kit@2.7.1(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.9))(svelte@4.2.19)(vite@5.4.9))
+        specifier: ^5.2.8
+        version: 5.2.8(@sveltejs/kit@2.7.1(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.9))(svelte@4.2.19)(vite@5.4.9))
       '@sveltejs/kit':
         specifier: ^2.7.1
         version: 2.7.1(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.9))(svelte@4.2.19)(vite@5.4.9)
@@ -56,7 +56,7 @@ importers:
         version: 4.2.19
       svelte-check:
         specifier: ^4.0.4
-        version: 4.0.4(picomatch@2.3.1)(svelte@4.2.19)(typescript@5.6.2)
+        version: 4.0.4(picomatch@4.0.2)(svelte@4.2.19)(typescript@5.6.2)
       svelte-meta-tags:
         specifier: ^3.1.4
         version: 3.1.4(svelte@4.2.19)(typescript@5.6.2)
@@ -311,8 +311,8 @@ packages:
   '@polka/url@1.0.0-next.24':
     resolution: {integrity: sha512-2LuNTFBIO0m7kKIQvvPHN6UE63VjpmL9rnEEaOOaiSPbZK+zUOYIzBAWcED+3XYzhYsd/0mD57VdxAEqqV52CQ==}
 
-  '@rollup/plugin-commonjs@28.0.0':
-    resolution: {integrity: sha512-BJcu+a+Mpq476DMXG+hevgPSl56bkUoi88dKT8t3RyUp8kGuOh+2bU8Gs7zXDlu+fyZggnJ+iOBGrb/O1SorYg==}
+  '@rollup/plugin-commonjs@28.0.1':
+    resolution: {integrity: sha512-+tNWdlWKbpB3WgBN7ijjYkq9X5uhjmcvyjEght4NmH5fAU++zfQzAJ6wumLS+dNcvwEZhKx2Z+skY8m7v0wGSA==}
     engines: {node: '>=16.0.0 || 14 >= 14.17'}
     peerDependencies:
       rollup: ^2.68.0||^3.0.0||^4.0.0
@@ -427,8 +427,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@sveltejs/adapter-node@5.2.6':
-    resolution: {integrity: sha512-FT9MDduZT2srUz/gDFFhQ3U2Mp9reZ3xJdJBEhr/lk+dkieSSpdgIDNNbMkm84hTaXXiC7f4cPNk8fB5nT3N2g==}
+  '@sveltejs/adapter-node@5.2.8':
+    resolution: {integrity: sha512-wll164mO8pX/0Ak6/64h0OzO4Id24PBmTla3zRlGEdbdQGkGb2WZPZOuvcWi6IEpwekA4RVFe58fjbkIV0Bslw==}
     peerDependencies:
       '@sveltejs/kit': ^2.4.0
 
@@ -1156,6 +1156,10 @@ packages:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
 
+  picomatch@4.0.2:
+    resolution: {integrity: sha512-M7BAV6Rlcy5u+m6oPhAPFgJTzAioX/6B0DxyvDlo9l8+T3nLKbrczg2WLUyzd45L8RqfUMyGPzekbMvX2Ldkwg==}
+    engines: {node: '>=12'}
+
   pify@2.3.0:
     resolution: {integrity: sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==}
     engines: {node: '>=0.10.0'}
@@ -1678,15 +1682,15 @@ snapshots:
 
   '@polka/url@1.0.0-next.24': {}
 
-  '@rollup/plugin-commonjs@28.0.0(rollup@4.22.5)':
+  '@rollup/plugin-commonjs@28.0.1(rollup@4.22.5)':
     dependencies:
       '@rollup/pluginutils': 5.1.0(rollup@4.22.5)
       commondir: 1.0.1
       estree-walker: 2.0.2
-      fdir: 6.3.0(picomatch@2.3.1)
+      fdir: 6.3.0(picomatch@4.0.2)
       is-reference: 1.2.1
       magic-string: 0.30.10
-      picomatch: 2.3.1
+      picomatch: 4.0.2
     optionalDependencies:
       rollup: 4.22.5
 
@@ -1762,9 +1766,9 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.22.5':
     optional: true
 
-  '@sveltejs/adapter-node@5.2.6(@sveltejs/kit@2.7.1(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.9))(svelte@4.2.19)(vite@5.4.9))':
+  '@sveltejs/adapter-node@5.2.8(@sveltejs/kit@2.7.1(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.9))(svelte@4.2.19)(vite@5.4.9))':
     dependencies:
-      '@rollup/plugin-commonjs': 28.0.0(rollup@4.22.5)
+      '@rollup/plugin-commonjs': 28.0.1(rollup@4.22.5)
       '@rollup/plugin-json': 6.1.0(rollup@4.22.5)
       '@rollup/plugin-node-resolve': 15.3.0(rollup@4.22.5)
       '@sveltejs/kit': 2.7.1(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.9))(svelte@4.2.19)(vite@5.4.9)
@@ -2282,9 +2286,9 @@ snapshots:
     dependencies:
       reusify: 1.0.4
 
-  fdir@6.3.0(picomatch@2.3.1):
+  fdir@6.3.0(picomatch@4.0.2):
     optionalDependencies:
-      picomatch: 2.3.1
+      picomatch: 4.0.2
 
   file-entry-cache@8.0.0:
     dependencies:
@@ -2532,6 +2536,8 @@ snapshots:
 
   picomatch@2.3.1: {}
 
+  picomatch@4.0.2: {}
+
   pify@2.3.0: {}
 
   pirates@4.0.6: {}
@@ -2713,11 +2719,11 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svelte-check@4.0.4(picomatch@2.3.1)(svelte@4.2.19)(typescript@5.6.2):
+  svelte-check@4.0.4(picomatch@4.0.2)(svelte@4.2.19)(typescript@5.6.2):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       chokidar: 4.0.1
-      fdir: 6.3.0(picomatch@2.3.1)
+      fdir: 6.3.0(picomatch@4.0.2)
       picocolors: 1.0.1
       sade: 1.8.1
       svelte: 4.2.19
