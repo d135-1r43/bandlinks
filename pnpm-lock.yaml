@@ -14,10 +14,10 @@ importers:
     devDependencies:
       '@sveltejs/adapter-node':
         specifier: ^5.2.8
-        version: 5.2.8(@sveltejs/kit@2.7.1(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.9))(svelte@4.2.19)(vite@5.4.9))
+        version: 5.2.8(@sveltejs/kit@2.7.2(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.9))(svelte@4.2.19)(vite@5.4.9))
       '@sveltejs/kit':
-        specifier: ^2.7.1
-        version: 2.7.1(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.9))(svelte@4.2.19)(vite@5.4.9)
+        specifier: ^2.7.2
+        version: 2.7.2(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.9))(svelte@4.2.19)(vite@5.4.9)
       '@sveltejs/vite-plugin-svelte':
         specifier: ^3.1.1
         version: 3.1.2(svelte@4.2.19)(vite@5.4.9)
@@ -432,8 +432,8 @@ packages:
     peerDependencies:
       '@sveltejs/kit': ^2.4.0
 
-  '@sveltejs/kit@2.7.1':
-    resolution: {integrity: sha512-TBVnkwgYQT3EafGQK6Eyh5FlLEBlRhCmqPTwcdOs+QdnyUc3eCAxRWtXlFxIWtmk6pqv11zdng8qTpThdTogew==}
+  '@sveltejs/kit@2.7.2':
+    resolution: {integrity: sha512-bFwrl+0bNr0/DHQZM0INwwSPNYqDjfsKRhUoa6rj9d8tDZzszBrJ3La6/HVFxWGONEigtG+SzHXa1BEa1BLdwA==}
     engines: {node: '>=18.13'}
     hasBin: true
     peerDependencies:
@@ -1773,15 +1773,15 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.22.5':
     optional: true
 
-  '@sveltejs/adapter-node@5.2.8(@sveltejs/kit@2.7.1(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.9))(svelte@4.2.19)(vite@5.4.9))':
+  '@sveltejs/adapter-node@5.2.8(@sveltejs/kit@2.7.2(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.9))(svelte@4.2.19)(vite@5.4.9))':
     dependencies:
       '@rollup/plugin-commonjs': 28.0.1(rollup@4.22.5)
       '@rollup/plugin-json': 6.1.0(rollup@4.22.5)
       '@rollup/plugin-node-resolve': 15.3.0(rollup@4.22.5)
-      '@sveltejs/kit': 2.7.1(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.9))(svelte@4.2.19)(vite@5.4.9)
+      '@sveltejs/kit': 2.7.2(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.9))(svelte@4.2.19)(vite@5.4.9)
       rollup: 4.22.5
 
-  '@sveltejs/kit@2.7.1(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.9))(svelte@4.2.19)(vite@5.4.9)':
+  '@sveltejs/kit@2.7.2(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.9))(svelte@4.2.19)(vite@5.4.9)':
     dependencies:
       '@sveltejs/vite-plugin-svelte': 3.1.2(svelte@4.2.19)(vite@5.4.9)
       '@types/cookie': 0.6.0
