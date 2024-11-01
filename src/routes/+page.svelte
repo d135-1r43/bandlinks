@@ -2,7 +2,11 @@
 	import type { PageData } from './$types';
 	import { MetaTags } from 'svelte-meta-tags';
 
-	export let data: PageData;
+	interface Props {
+		data: PageData;
+	}
+
+	let { data }: Props = $props();
 
 	const currentYear = new Date().getFullYear();
 
@@ -12,8 +16,8 @@
 </script>
 
 <MetaTags
-	title="{data.aggregator.title}"
-	description="{data.aggregator.tag_line}"
+	title={data.aggregator.title}
+	description={data.aggregator.tag_line}
 	openGraph={{
     title: data.aggregator.title,
     description: data.aggregator.tag_line,
