@@ -2,9 +2,9 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ['main']
   pull_request:
-    branches: [ "main" ]
+    branches: ['main']
 
 jobs:
   build:
@@ -14,25 +14,25 @@ jobs:
       packages: write
 
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Log in to the Container registry
-      uses: docker/login-action@v3
-      with:
-        registry: ghcr.io
-        username: ${{ github.repository_owner }}
-        password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Log in to the Container registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Build and push Docker image
-      uses: docker/build-push-action@v5
-      with:
-        context: .
-        push: true
-        tags: ghcr.io/d135-1r43/bandlinks:latest
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ghcr.io/d135-1r43/bandlinks:latest
 
-    - name: Call a webhook for Portainer
-      uses: distributhor/workflow-webhook@v3
-      if: github.ref == 'refs/heads/main'
-      env:
-        webhook_type: 'json'
-        webhook_url: ${{ secrets.PORTAINER_WEBHOOK_URL }}
+      - name: Call a webhook for Portainer
+        uses: distributhor/workflow-webhook@v3
+        if: github.ref == 'refs/heads/main'
+        env:
+          webhook_type: 'json'
+          webhook_url: ${{ secrets.PORTAINER_WEBHOOK_URL }}
