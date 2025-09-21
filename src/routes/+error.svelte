@@ -8,7 +8,7 @@
 		<p class="text-6xl md:text-7xl lg:text-9xl font-bold tracking-wider text-gray-300">{$page.status}</p>
 		<p class="text-2xl md:text-3xl lg:text-5xl font-bold tracking-wider text-gray-500 mt-4">{$page.error.message}</p>
 		<a href="/"
-			 class="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-gray-100 px-4 py-2 mt-6 rounded transition duration-150"
+			 class="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-gray-100 px-4 py-2 mt-6 rounded-sm transition duration-150"
 			 title="Return Home">
 			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
 				<path fill-rule="evenodd"
