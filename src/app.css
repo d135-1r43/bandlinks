@@ -10,11 +10,35 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
-  }
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentcolor);
+	}
+
+	/* Dynamic theming support */
+	:root {
+		--theme-color: #3b82f6; /* Default fallback */
+	}
+
+	/* Apply theme color to relevant components */
+	.btn-primary {
+		background-color: var(--theme-color);
+		border-color: var(--theme-color);
+	}
+
+	.btn-primary:hover {
+		background-color: color-mix(in srgb, var(--theme-color) 90%, black);
+		border-color: color-mix(in srgb, var(--theme-color) 90%, black);
+	}
+
+	.hero-overlay {
+		background: linear-gradient(
+			135deg,
+			color-mix(in srgb, var(--theme-color) 20%, transparent) 0%,
+			color-mix(in srgb, var(--theme-color) 40%, black) 100%
+		);
+	}
 }
