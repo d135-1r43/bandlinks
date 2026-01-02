@@ -9,11 +9,9 @@
 	const displayYear = $derived(currentYear ?? new Date().getFullYear());
 </script>
 
-<footer class="footer items-center p-4 bg-black text-neutral-content">
-	<div class="items-center grid-flow-col">
-		<p aria-label="Copyright year">©&nbsp;{displayYear}</p>
-	</div>
-	<div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+<footer class="flex flex-wrap items-center justify-between gap-4 p-4 bg-black text-neutral-content">
+	<p aria-label="Copyright year">©&nbsp;{displayYear}</p>
+	<div class="flex gap-4 items-center">
 		<span>Jurisdiction: Germany</span>
 		<a
 			href={impressUrl}
