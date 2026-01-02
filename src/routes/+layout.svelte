@@ -1,6 +1,8 @@
 <script lang="ts">
 	import '../app.css';
 	import type { LayoutData } from '$lib/types';
+	import { getAssetUrl } from '$lib/utils';
+	import { env } from '$env/dynamic/public';
 
 	interface Props {
 		data: LayoutData;
@@ -9,9 +11,9 @@
 
 	let { data, children }: Props = $props();
 
-	const getAssetUrl = $derived((uuid: string) => 'https://directus.herhoffer.net/assets/' + uuid);
 	const faviconUrl = $derived(getAssetUrl(data.aggregator.favicon));
 	const themeColor = $derived(data.aggregator.theme_color);
+	const plausibleUrl = $derived(env.PUBLIC_PLAUSIBLE_URL || 'https://plausible.herhoffer.net');
 </script>
 
 <svelte:head>
@@ -23,11 +25,7 @@
 			--theme-color: {themeColor};
 		}
 	</style>
-	<script
-		defer
-		data-domain={data.host}
-		src="https://plausible.herhoffer.net/js/script.outbound-links.js"
-	></script>
+	<script defer data-domain={data.host} src="{plausibleUrl}/js/script.outbound-links.js"></script>
 </svelte:head>
 
 {@render children?.()}

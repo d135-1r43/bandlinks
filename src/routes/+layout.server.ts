@@ -3,6 +3,8 @@ import type { DirectusResponse, LinkAggregator } from '$lib/types';
 import { env } from '$env/dynamic/private';
 import { error } from '@sveltejs/kit';
 
+const DIRECTUS_URL = env.PUBLIC_DIRECTUS_URL || 'https://directus.herhoffer.net';
+
 export const load: LayoutServerLoad = async ({ fetch, url }) => {
 	const bandId: string = env.BAND_ID;
 
@@ -11,9 +13,7 @@ export const load: LayoutServerLoad = async ({ fetch, url }) => {
 	}
 
 	try {
-		const jsonResponse: Response = await fetch(
-			`https://directus.herhoffer.net/items/link_aggregator/${bandId}`
-		);
+		const jsonResponse: Response = await fetch(`${DIRECTUS_URL}/items/link_aggregator/${bandId}`);
 
 		if (!jsonResponse.ok) {
 			throw error(jsonResponse.status, 'Failed to fetch aggregator data');

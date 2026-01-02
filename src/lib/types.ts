@@ -1,45 +1,45 @@
 export interface DirectusFile {
-	id: string;
-	width?: number;
-	height?: number;
-	description?: string;
-	filename_download: string;
-	type: string;
+	readonly id: string;
+	readonly width?: number;
+	readonly height?: number;
+	readonly description?: string;
+	readonly filename_download: string;
+	readonly type: string;
 }
 
 export interface Link {
-	id: string;
-	caption: string;
-	url: string;
-	font_awesome_font: string;
-	font_awesome_icon_name: string;
-	sort: number;
+	readonly id: string;
+	readonly caption: string;
+	readonly url: string;
+	readonly font_awesome_font: string;
+	readonly font_awesome_icon_name: string;
+	readonly sort: number;
 }
 
 export interface LinkAggregator {
-	id: string;
-	title: string;
-	tagline: string;
-	tag_line: string;
-	theme_color: string;
-	impress_url: string;
-	favicon: string;
-	background_image: DirectusFile;
-	logo_image: DirectusFile;
-	links: Link[];
+	readonly id: string;
+	readonly title: string;
+	readonly tagline: string;
+	readonly tag_line: string;
+	readonly theme_color: string;
+	readonly impress_url: string;
+	readonly favicon: string;
+	readonly background_image: DirectusFile;
+	readonly logo_image: DirectusFile;
+	readonly links: readonly Link[];
 }
 
 export interface DirectusResponse<T> {
-	data: T;
+	readonly data: T;
 }
 
 export interface PageData {
-	aggregator: LinkAggregator;
-	hero: DirectusFile;
-	host: string;
+	readonly aggregator: LinkAggregator;
+	readonly hero: DirectusFile;
+	readonly host: string;
 }
 
 export interface LayoutData {
-	aggregator: LinkAggregator;
-	host: string;
+	readonly aggregator: LinkAggregator;
+	readonly host: string;
 }

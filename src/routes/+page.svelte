@@ -3,6 +3,7 @@
 	import { MetaTags } from 'svelte-meta-tags';
 	import HeroSection from '$lib/components/HeroSection.svelte';
 	import PageFooter from '$lib/components/PageFooter.svelte';
+	import { getAssetUrl } from '$lib/utils';
 
 	interface Props {
 		data: PageData;
@@ -10,8 +11,7 @@
 
 	let { data }: Props = $props();
 
-	const getImageUrl = $derived((uuid: string) => 'https://directus.herhoffer.net/assets/' + uuid);
-	const ogImageUrl = $derived(getImageUrl(data.aggregator.background_image.id));
+	const ogImageUrl = $derived(getAssetUrl(data.aggregator.background_image.id));
 </script>
 
 <MetaTags

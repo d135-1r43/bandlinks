@@ -39,17 +39,20 @@ A modern, fast, and accessible "link in bio" aggregator built with **Svelte 5** 
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/your-username/bandlinks.git
    cd bandlinks
    ```
 
 2. **Install dependencies**
+
    ```bash
    pnpm install
    ```
 
 3. **Set up environment variables**
+
    ```bash
    # Create .env file
    echo "BAND_ID=your-directus-item-id" > .env
@@ -104,9 +107,9 @@ src/
 
 ### Environment Variables
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `BAND_ID` | Your Directus item ID for the link aggregator | ✅ Yes |
+| Variable  | Description                                   | Required |
+| --------- | --------------------------------------------- | -------- |
+| `BAND_ID` | Your Directus item ID for the link aggregator | ✅ Yes   |
 
 ### Directus Setup
 
@@ -114,25 +117,25 @@ Your Directus instance should have a `link_aggregator` collection with the follo
 
 ```typescript
 interface LinkAggregator {
-  id: string;
-  title: string;
-  tagline: string;
-  tag_line: string;
-  theme_color: string;
-  impress_url: string;
-  favicon: string;
-  background_image: DirectusFile;
-  logo_image: DirectusFile;
-  links: Link[];
+	id: string;
+	title: string;
+	tagline: string;
+	tag_line: string;
+	theme_color: string;
+	impress_url: string;
+	favicon: string;
+	background_image: DirectusFile;
+	logo_image: DirectusFile;
+	links: Link[];
 }
 
 interface Link {
-  id: string;
-  caption: string;
-  url: string;
-  font_awesome_font: string;
-  font_awesome_icon_name: string;
-  sort: number;
+	id: string;
+	caption: string;
+	url: string;
+	font_awesome_font: string;
+	font_awesome_icon_name: string;
+	sort: number;
 }
 ```
 
@@ -176,7 +179,7 @@ Built with Tailwind CSS v4 and DaisyUI for rapid customization:
 ```css
 /* Custom theme variables are automatically injected */
 :root {
-  --theme-color: #your-brand-color;
+	--theme-color: #your-brand-color;
 }
 ```
 
