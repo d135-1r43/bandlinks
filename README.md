@@ -83,26 +83,6 @@ pnpm run lint         # Check code formatting and linting
 pnpm run format       # Format code with Prettier
 ```
 
-## 🏗️ Project Structure
-
-```
-src/
-├── lib/
-│   ├── components/          # Reusable Svelte components
-│   │   ├── HeroSection.svelte
-│   │   ├── LinkButton.svelte
-│   │   └── PageFooter.svelte
-│   ├── types.ts            # TypeScript type definitions
-│   └── utils.ts            # Utility functions
-├── routes/
-│   ├── +layout.svelte      # App layout
-│   ├── +layout.server.ts   # Layout data loading
-│   ├── +page.svelte        # Main page
-│   ├── +page.server.ts     # Page data loading
-│   └── +error.svelte       # Error page
-└── app.css                 # Global styles and Tailwind config
-```
-
 ## ⚙️ Configuration
 
 ### Environment Variables
