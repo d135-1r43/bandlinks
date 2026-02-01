@@ -4,3 +4,34 @@ updates:
     directory: '/'
     schedule:
       interval: 'weekly'
+    groups:
+      svelte:
+        patterns:
+          - 'svelte*'
+          - '@sveltejs/*'
+      typescript:
+        patterns:
+          - 'typescript*'
+          - '@typescript-eslint/*'
+      build-tools:
+        patterns:
+          - 'vite*'
+          - '@sveltejs/adapter-*'
+          - 'prettier'
+          - 'eslint*'
+      dependencies:
+        patterns:
+          - '*'
+        exclude-patterns:
+          - 'svelte*'
+          - '@sveltejs/*'
+          - 'typescript*'
+          - '@typescript-eslint/*'
+          - 'vite*'
+          - 'prettier'
+          - 'eslint*'
+
+  - package-ecosystem: 'docker'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
