@@ -23,6 +23,7 @@ export interface LinkAggregator {
 	readonly tag_line: string;
 	readonly theme_color: string;
 	readonly impress_url: string;
+	readonly plausible_script_id?: string;
 	readonly favicon: string;
 	readonly background_image: DirectusFile;
 	readonly logo_image: DirectusFile;

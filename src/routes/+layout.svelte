@@ -14,6 +14,7 @@
 	const faviconUrl = $derived(getAssetUrl(data.aggregator.favicon));
 	const themeColor = $derived(data.aggregator.theme_color);
 	const plausibleUrl = $derived(env.PUBLIC_PLAUSIBLE_URL || 'https://plausible.herhoffer.net');
+	const plausibleScriptId = $derived(data.aggregator.plausible_script_id);
 </script>
 
 <svelte:head>
@@ -25,7 +26,23 @@
 			--theme-color: {themeColor};
 		}
 	</style>
-	<script defer data-domain={data.host} src="{plausibleUrl}/js/script.outbound-links.js"></script>
+	{#if plausibleScriptId}
+		<!-- Privacy-friendly analytics by Plausible -->
+		<script async src="{plausibleUrl}/js/{plausibleScriptId}.js"></script>
+		<script>
+			window.plausible =
+				window.plausible ||
+				function () {
+					(plausible.q = plausible.q || []).push(arguments);
+				};
+			plausible.init =
+				plausible.init ||
+				function (i) {
+					plausible.o = i || {};
+				};
+			plausible.init();
+		</script>
+	{/if}
 </svelte:head>
 
 {@render children?.()}
