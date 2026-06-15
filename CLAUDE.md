@@ -108,6 +108,7 @@ BAND_ID=your-directus-item-id
 **Collection Schema**: The Directus `link_aggregator` collection should have:
 
 - Basic fields: `id`, `title`, `tagline`, `tag_line`, `theme_color`, `impress_url`
+- Analytics: `plausible_script_id` (optional) - per-site Plausible script id, e.g. `pa-6AZIomlXuCHYU7oAYQDws`
 - File relations: `favicon`, `background_image`, `logo_image`
 - Many-to-many relation: `links` (sorted by `sort` field)
 
@@ -133,4 +134,4 @@ docker run -p 3000:3000 -e BAND_ID=your-id bandlinks
 - **Accessibility**: Components use proper ARIA labels and semantic HTML (see `HeroSection.svelte` and `LinkButton.svelte`)
 - **Performance**: Images are preloaded in `HeroSection.svelte` using `onMount()` and the `preloadImage()` utility
 - **SEO**: Meta tags are managed via `svelte-meta-tags` in `+page.svelte` with Open Graph support
-- **Analytics**: Plausible Analytics is integrated in `+layout.svelte` (hardcoded to `plausible.herhoffer.net`)
+- **Analytics**: Plausible Analytics is integrated in `+layout.svelte`. The instance URL defaults to `plausible.herhoffer.net` (overridable via `PUBLIC_PLAUSIBLE_URL`). The script loads only when the Directus item provides a `plausible_script_id`, using Plausible's new per-site script format (`/js/{plausible_script_id}.js` + `plausible.init()`). The tracked domain is baked into each generated script, so each deployed domain needs its own site registered in Plausible and its id stored on the matching band.
