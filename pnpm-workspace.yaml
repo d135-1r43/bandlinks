@@ -2,3 +2,12 @@ allowBuilds:
   esbuild: true
 onlyBuiltDependencies:
   - esbuild
+
+# Tailwind's build-time CSS toolchain publishes far more often than the 24h
+# minimumReleaseAge window, so Dependabot lockfile updates routinely resolve
+# transitive versions only hours old and fail the Docker build. Exempt just
+# these packages; the release-age guard stays on for everything else.
+minimumReleaseAgeExclude:
+  - lightningcss
+  - lightningcss-*
+  - postcss
