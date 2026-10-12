@@ -1,6 +1,6 @@
-import { env } from '$env/dynamic/public';
+import { PUBLIC_DIRECTUS_URL } from '$app/env/public';
 
-const DIRECTUS_URL = env.PUBLIC_DIRECTUS_URL || 'https://directus.herhoffer.net';
+const DIRECTUS_URL = PUBLIC_DIRECTUS_URL;
 
 export function getAssetUrl(uuid: string): string {
 	return `${DIRECTUS_URL}/assets/${uuid}`;

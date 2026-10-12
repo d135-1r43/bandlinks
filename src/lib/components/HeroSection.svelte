@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { LinkAggregator, DirectusFile } from '$lib/types';
-	import { getAssetUrl, preloadImage } from '$lib/utils';
+	import type { LinkAggregator, DirectusFile } from '#lib/types.ts';
+	import { getAssetUrl, preloadImage } from '#lib/utils.ts';
 	import { onMount } from 'svelte';
 	import LinkButton from './LinkButton.svelte';
 

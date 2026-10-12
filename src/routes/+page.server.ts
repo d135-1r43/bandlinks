@@ -1,12 +1,13 @@
 import type { PageServerLoad } from './$types';
-import type { DirectusResponse, LinkAggregator, DirectusFile } from '$lib/types';
-import { env } from '$env/dynamic/private';
+import type { DirectusResponse, LinkAggregator, DirectusFile } from '#lib/types.ts';
+import { BAND_ID } from '$app/env/private';
+import { PUBLIC_DIRECTUS_URL } from '$app/env/public';
 import { error } from '@sveltejs/kit';
 
-const DIRECTUS_URL = env.PUBLIC_DIRECTUS_URL || 'https://directus.herhoffer.net';
+const DIRECTUS_URL = PUBLIC_DIRECTUS_URL;
 
 export const load: PageServerLoad = async ({ fetch }) => {
-	const bandId: string = env.BAND_ID;
+	const bandId = BAND_ID;
 
 	if (!bandId) {
 		throw error(500, 'BAND_ID environment variable is not set');

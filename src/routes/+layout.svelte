@@ -1,8 +1,8 @@
 <script lang="ts">
 	import '../app.css';
-	import type { LayoutData } from '$lib/types';
-	import { getAssetUrl } from '$lib/utils';
-	import { env } from '$env/dynamic/public';
+	import type { LayoutData } from '#lib/types.ts';
+	import { getAssetUrl } from '#lib/utils.ts';
+	import { PUBLIC_PLAUSIBLE_URL } from '$app/env/public';
 
 	interface Props {
 		data: LayoutData;
@@ -13,7 +13,7 @@
 
 	const faviconUrl = $derived(getAssetUrl(data.aggregator.favicon));
 	const themeColor = $derived(data.aggregator.theme_color);
-	const plausibleUrl = $derived(env.PUBLIC_PLAUSIBLE_URL || 'https://plausible.herhoffer.net');
+	const plausibleUrl = PUBLIC_PLAUSIBLE_URL;
 	const plausibleScriptId = $derived(data.aggregator.plausible_script_id);
 </script>
 
