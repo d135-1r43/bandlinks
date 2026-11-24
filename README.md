@@ -41,7 +41,7 @@ A modern, fast, and accessible "link in bio" aggregator built with **Svelte 5** 
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/your-username/bandlinks.git
+   git clone https://github.com/d135-1r43/bandlinks.git
    cd bandlinks
    ```
 
@@ -54,8 +54,8 @@ A modern, fast, and accessible "link in bio" aggregator built with **Svelte 5** 
 3. **Set up environment variables**
 
    ```bash
-   # Create .env file
-   echo "BAND_ID=your-directus-item-id" > .env
+   cp .env.example .env
+   # then edit .env: set BAND_ID and point PUBLIC_DIRECTUS_URL to your Directus instance
    ```
 
 4. **Start development server**
@@ -87,9 +87,13 @@ pnpm run format       # Format code with Prettier
 
 ### Environment Variables
 
-| Variable  | Description                                   | Required |
-| --------- | --------------------------------------------- | -------- |
-| `BAND_ID` | Your Directus item ID for the link aggregator | ✅ Yes   |
+| Variable               | Description                                   | Required                           | Default                           |
+| ---------------------- | --------------------------------------------- | ---------------------------------- | --------------------------------- |
+| `BAND_ID`              | Your Directus item ID for the link aggregator | ✅ Yes                             | –                                 |
+| `PUBLIC_DIRECTUS_URL`  | URL of your Directus instance                 | ⚠️ Yes, unless you use the default | `https://directus.herhoffer.net`  |
+| `PUBLIC_PLAUSIBLE_URL` | URL of your Plausible Analytics instance      | No                                 | `https://plausible.herhoffer.net` |
+
+See [`.env.example`](.env.example) for a template.
 
 ### Directus Setup
 
@@ -130,7 +134,10 @@ The project includes a complete Docker setup:
 docker build -t bandlinks .
 
 # Run container
-docker run -p 3000:3000 -e BAND_ID=your-id bandlinks
+docker run -p 3000:3000 \
+  -e BAND_ID=your-directus-item-id \
+  -e PUBLIC_DIRECTUS_URL=https://your-directus-instance.com \
+  bandlinks
 ```
 
 ### GitHub Actions

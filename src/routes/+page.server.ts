@@ -1,9 +1,10 @@
 import type { PageServerLoad } from './$types';
 import type { DirectusResponse, LinkAggregator, DirectusFile } from '$lib/types';
 import { env } from '$env/dynamic/private';
+import { env as publicEnv } from '$env/dynamic/public';
 import { error } from '@sveltejs/kit';
 
-const DIRECTUS_URL = env.PUBLIC_DIRECTUS_URL || 'https://directus.herhoffer.net';
+const DIRECTUS_URL = publicEnv.PUBLIC_DIRECTUS_URL || 'https://directus.herhoffer.net';
 
 export const load: PageServerLoad = async ({ fetch }) => {
 	const bandId: string = env.BAND_ID;
