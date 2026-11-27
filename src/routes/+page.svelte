@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { PageData } from '$lib/types';
+	import type { PageData } from '#lib/types.ts';
 	import { MetaTags } from 'svelte-meta-tags';
-	import HeroSection from '$lib/components/HeroSection.svelte';
-	import PageFooter from '$lib/components/PageFooter.svelte';
-	import { getAssetUrl } from '$lib/utils';
+	import HeroSection from '#lib/components/HeroSection.svelte';
+	import PageFooter from '#lib/components/PageFooter.svelte';
+	import { getAssetUrl } from '#lib/utils.ts';
 
 	interface Props {
 		data: PageData;

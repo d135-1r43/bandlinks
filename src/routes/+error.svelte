@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 
-	const errorCode = $derived($page.status || 500);
-	const errorMessage = $derived($page.error?.message || 'An unexpected error occurred');
+	const errorCode = $derived(page.status || 500);
+	const errorMessage = $derived(page.error?.message || 'An unexpected error occurred');
 </script>
 
 <svelte:head>
